@@ -1,19 +1,24 @@
-body {
+body
+{
   margin: 0;
   padding: 0;
   width:100vw;
   height: 100vh;
   background-color: #eee;
 }
-.content {
+
+.content
+{
   justify-content: center;
   align-items: center;
   width:100%;
   height:100%;
 }
-.loader-wrapper {
+
+.loader-wrapper
+{
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -23,7 +28,9 @@ body {
   align-items: center;
   z-index: 99;
 }
-.loader {
+
+.loader
+{
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -31,21 +38,27 @@ body {
   border: 4px solid #Fff;
   animation: loader 2s infinite ease;
 }
-.loader-inner {
+
+.loader-inner
+{
   vertical-align: top;
   display: inline-block;
   width: 100%;
   background-color: #fff;
   animation: loader-inner 2s infinite ease-in;
 }
-@keyframes loader {
+
+@keyframes loader
+{
   0% { transform: rotate(0deg);}
   25% { transform: rotate(180deg);}
   50% { transform: rotate(180deg);}
   75% { transform: rotate(360deg);}
   100% { transform: rotate(360deg);}
 }
-@keyframes loader-inner {
+
+@keyframes loader-inner
+{
   0% { height: 0%;}
   25% { height: 0%;}
   50% { height: 100%;}
@@ -53,28 +66,32 @@ body {
   100% { height: 0%;}
 }
 
-
-/**/
-
-/* Google Font CDN Link */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
+
+*
+{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins" , sans-serif;
 }
-body{
+
+body
+{
   position: relative;
-  min-height: 100vh;
+  min-height: 300vh;
   width: 100%;
   overflow: hidden;
 }
-::selection{
+
+::selection
+{
   color: #fff;
   background: #11101d;
 }
-.sidebar{
+
+.sidebar
+{
   position: fixed;
   top: 0;
   left: 0;
@@ -85,10 +102,14 @@ body{
   z-index: 99;
   transition: all 0.5s ease;
 }
-.sidebar.active{
+
+.sidebar.active
+{
   width: 240px
 }
-.sidebar .logo_content .logo{
+
+.sidebar .logo_content .logo
+{
   color: #fff;
   display: flex;
   height: 50px;
@@ -98,19 +119,27 @@ body{
   pointer-events: none;
   transition: all 0.5s ease;
 }
-.sidebar.active .logo_content .logo{
+
+.sidebar.active .logo_content .logo
+{
   opacity: 1;
   pointer-events: none;
 }
-.logo_content .logo i{
+
+.logo_content .logo i
+{
   font-size: 28px;
   margin-right: 5px;
 }
-.logo_content .logo .logo_name{
+
+.logo_content .logo .logo_name
+{
   font-size: 20px;
   font-weight: 400;
 }
-.sidebar #btn{
+
+.sidebar #btn
+{
   position: absolute;
   color: #fff;
   top: 6px;
@@ -122,13 +151,19 @@ body{
   line-height: 50px;
   transform: translateX(-50%);
 }
-.sidebar.active #btn{
+
+.sidebar.active #btn
+{
   left: 85%;
 }
-.sidebar ul{
+
+.sidebar ul
+{
   margin-top: 20px;
 }
-.sidebar ul li{
+
+.sidebar ul li
+{
   position: relative;
   height: 50px;
   width: 100%;
@@ -137,7 +172,9 @@ body{
   line-height: 50px;
   margin: 5px 0;
 }
-.sidebar ul li .tooltip{
+
+.sidebar ul li .tooltip
+{
   position: absolute;
   left: 125px;
   top: 0;
@@ -154,15 +191,21 @@ body{
   pointer-events: none;
   display: block;
 }
-.sidebar.active ul li .tooltip{
+
+.sidebar.active ul li .tooltip
+{
   display: none;
 }
-.sidebar ul li:hover .tooltip{
+
+.sidebar ul li:hover .tooltip
+{
   transition: all 0.5s ease;
   opacity: 1;
   top: 50%
 }
-.sidebar ul li input{
+
+.sidebar ul li input
+{
   position: absolute;
   height: 100%;
   width: 100%;
@@ -176,7 +219,9 @@ body{
   font-size: 18px;
   color: #fff;
 }
-.sidebar ul li a{
+
+.sidebar ul li a
+{
   color: #fff;
   display: flex;
   align-items: center;
@@ -185,17 +230,23 @@ body{
   white-space: nowrap;
   transition: all 0.4s ease;
 }
-.sidebar ul li a:hover{
+
+.sidebar ul li a:hover
+{
   color: #11101d;
   background: #fff;
 }
-.sidebar #btn:hover{
+
+.sidebar #btn:hover
+{
   color: #11101d;
   background: #fff;
   border-radius: 12px;
   cursor: pointer;
 }
-.sidebar ul li i{
+
+.sidebar ul li i
+{
   font-size: 18px;
   font-weight: 400;
   height: 50px;
@@ -204,38 +255,53 @@ body{
   line-height: 50px;
   text-align: center;
 }
-.sidebar .links_name{
+
+.sidebar .links_name
+{
   font-size: 15px;
   font-weight: 400;
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
 }
-.sidebar.active .links_name{
+
+.sidebar.active .links_name
+{
   transition: 0s;
   opacity: 1;
   pointer-events: auto
 }
-.home_content{
+
+.home_content
+{
   position: absolute;
   height: 100%;
   width: calc(100% - 78px);
   left: 78px;
   background: #E4E9F7;
-  box:shadow: 0 5px 10px rgba(0,0,0,0.2px);
   transition: all 0.5s ease;
 }
-.sidebar.active ~ .home_content{
+
+.sidebar.active ~ .home_content
+{
   z-index: 100;
 }
-.home_content .text{
+
+.home_content .text
+{
   font-size: 25px;
   font-weight: 500;
   color: #1d1b31;
   margin: 12px;
 }
-.sidebar.active ~ .home_content{
+
+.sidebar.active ~ .home_content
+{
   width: calc(100% - 240px);
   left: 240px;
+}
 
+#content_1, #content_2, #content_3
+{
+  height: 100vh;
 }
